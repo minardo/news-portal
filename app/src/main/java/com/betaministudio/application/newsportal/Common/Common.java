@@ -1,6 +1,8 @@
 package com.betaministudio.application.newsportal.Common;
 
+import com.betaministudio.application.newsportal.Interface.IconService;
 import com.betaministudio.application.newsportal.Interface.NewsService;
+import com.betaministudio.application.newsportal.Remote.IconClient;
 import com.betaministudio.application.newsportal.Remote.RetrofitClient;
 
 /**
@@ -14,5 +16,9 @@ public class Common {
 
     public static NewsService getNewsService() {
         return RetrofitClient.getClient(BASE_URL).create(NewsService.class);
+    }
+
+    public static IconService getIconService() {
+        return IconClient.getClient().create(IconService.class);
     }
 }

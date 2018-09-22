@@ -1,6 +1,6 @@
 package com.betaministudio.application.newsportal.Interface;
 
-import com.betaministudio.application.newsportal.Model.WebSite;
+import com.betaministudio.application.newsportal.Model.WebSiteModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -11,5 +11,5 @@ import retrofit2.http.GET;
 
 public interface NewsService {
     @GET("v1/sources?language=en")
-    Call<WebSite> getSources();
+    Call<WebSiteModel> getSources();
 }

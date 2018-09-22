@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.betaministudio.application.newsportal.Interface.ItemClickListener;
-import com.betaministudio.application.newsportal.Model.WebSite;
+import com.betaministudio.application.newsportal.Model.WebSiteModel;
 import com.betaministudio.application.newsportal.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -43,11 +43,11 @@ class ListSourceViewHolder extends RecyclerView.ViewHolder implements View.OnCli
 
 public class ListSourceAdapter extends RecyclerView.Adapter<ListSourceViewHolder> {
     private Context context;
-    private WebSite webSite;
+    private WebSiteModel webSiteModel;
 
-    public ListSourceAdapter(Context context, WebSite webSite) {
+    public ListSourceAdapter(Context context, WebSiteModel webSiteModel) {
         this.context = context;
-        this.webSite = webSite;
+        this.webSiteModel = webSiteModel;
     }
 
     @Override
@@ -64,6 +64,6 @@ public class ListSourceAdapter extends RecyclerView.Adapter<ListSourceViewHolder
 
     @Override
     public int getItemCount() {
-        return webSite.getSources().size();
+        return webSiteModel.getSourceModels().size();
     }
 }
